@@ -1,0 +1,1077 @@
+/* Template-specific stuff
+ *
+ * Customizations just for the template; these are not necessary for anything
+ * with disabling the responsiveness.
+ */
+
+/* Account for fixed navbar */
+body {
+  background:#ddd url(images/bgpattern.jpg) center top repeat;
+  font-family:myriad pro;
+}
+
+a {
+color:#444;
+}
+ul, ol {
+list-style:none;
+}
+
+.container .navbar-header,
+.container .navbar-collapse {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/* Always float the navbar header */
+.navbar-header {
+  float: left;
+}
+
+/* Undo the collapsing navbar */
+.navbar-collapse {
+  display: block !important;
+  height: auto !important;
+  padding-bottom: 0;
+  overflow: visible !important;
+  visibility: visible !important;
+}
+
+.navbar-toggle {
+  display: none;
+}
+.navbar-collapse {
+  border-top: 0;
+}
+
+.navbar-brand {
+  margin-left: -15px;
+}
+
+/* Always apply the floated nav */
+.navbar-nav {
+  float: left;
+  margin: 0;
+}
+.navbar-nav > li {
+  float: left;
+}
+.navbar-nav > li > a {
+  padding: 15px;
+}
+
+/* Redeclare since we override the float above */
+.navbar-nav.navbar-right {
+  float: right;
+}
+
+/* Undo custom dropdowns */
+.navbar .navbar-nav .open .dropdown-menu {
+  position: absolute;
+  float: left;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, .15);
+  border-width: 0 1px 1px;
+  border-radius: 0 0 4px 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+  color: #333;
+}
+.navbar .navbar-nav .open .dropdown-menu > li > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > li > a:focus,
+.navbar .navbar-nav .open .dropdown-menu > .active > a,
+.navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
+  color: #fff !important;
+  background-color: #428bca !important;
+}
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a,
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+  color: #999 !important;
+  background-color: transparent !important;
+}
+
+/* Undo form expansion */
+.navbar-form {
+  float: left;
+  width: auto;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-right: 0;
+  margin-left: 0;
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+/* Copy-pasted from forms.less since we mixin the .form-inline styles. */
+.navbar-form .form-group {
+  display: inline-block;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.navbar-form .form-control {
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+}
+
+.navbar-form .form-control-static {
+  display: inline-block;
+}
+
+.navbar-form .input-group {
+  display: inline-table;
+  vertical-align: middle;
+}
+
+.navbar-form .input-group .input-group-addon,
+.navbar-form .input-group .input-group-btn,
+.navbar-form .input-group .form-control {
+  width: auto;
+}
+
+.navbar-form .input-group > .form-control {
+  width: 100%;
+}
+
+.navbar-form .control-label {
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.navbar-form .radio,
+.navbar-form .checkbox {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.navbar-form .radio label,
+.navbar-form .checkbox label {
+  padding-left: 0;
+}
+
+.navbar-form .radio input[type="radio"],
+.navbar-form .checkbox input[type="checkbox"] {
+  position: relative;
+  margin-left: 0;
+}
+
+.navbar-form .has-feedback .form-control-feedback {
+  top: 0;
+}
+
+.right-nav-top .form-control {
+padding:3px 6px;
+height:25px;
+}
+
+.right-nav-top .navbar-nav li a{
+font-size:11px;
+padding:12px 5px;
+}
+/* Non-responsive overrides
+ *
+ * Utilize the following CSS to disable the responsive-ness of the container,
+ * grid system, and navbar.
+ */
+
+/* Reset the container */	
+.container {
+  width: 970px;
+  max-width: none !important;
+background:#fff;
+}
+.header {
+height:85px;
+background:#fff;
+}
+h1.logo {
+display:block;
+height:80px;
+margin:0;
+padding-top:18px;
+}
+
+.right-nav-top {
+height:41px;
+}
+.right-nav-bottom {
+height:30px; 
+margin-top:14px;
+}
+.sec-nav {
+text-align:right;
+list-style:none;
+}
+.sec-nav:before{
+background:transparent url(images/sec-nav.png) left -4px no-repeat;
+width:60px;
+height:30px;
+content:"";
+float:left;
+}
+
+.sec-nav.navbar-nav>li>a {
+padding:7px 15px 3px;
+background:#065139;
+color:#fff;
+text-transform:uppercase;
+font-size:11px;
+}
+.navigation {
+height:60px;
+position:relative;
+z-index:10;
+margin-bottom:-46px;
+}
+
+/*untuk diatas BXslider*/
+.navigation ul{
+    position:relative;
+    z-index:10;
+    margin-bottom:-46px;    
+}
+/*-----------------------*/
+
+.main-nav:before{
+background:transparent url(images/main-nav.png) right top no-repeat;
+width:80px;
+height:50px;
+content:"";
+float:left;
+
+}
+
+
+
+.main-nav.navbar-nav>li>a {
+padding:15px 15px 15px;
+background:#fbc800;
+color:#fff;
+text-transform:uppercase;
+font-size:14px;
+}
+.main-nav.navbar-nav>li:first-child>a{
+margin-left:0px;
+}
+.main-nav.navbar-nav>li>a:hover {
+background:#ECBF0F;
+}
+
+.nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
+background:#ECBF0F;
+}
+
+.content-top {
+top:-45px;
+margin-bottom:-45px !important;
+position:relative;
+z-index:7
+}
+/*slider*/
+.slider {
+height:400px;position:relative;
+
+}
+.welcome {
+padding:40px 0;
+}
+.welcome p {
+    font-size: 16px;
+}
+
+.middle.well{    
+    width: inherit;
+    height: 150px;
+}
+.middle.well h2{
+    font-weight: 400;
+    text-align: center !important;
+}
+/*slidernews*/
+.slidernews {
+padding:0px 0 20px;
+color:#fff;
+}
+.slidernews  h2 a {
+color:#fff;
+font-weight:normal;
+}
+
+/*fakultas*/
+.prodi{
+padding:0px 0 40px;
+background:#004028;
+}
+.tab-prodi {
+margin-top:30px;
+text-align:center;
+}
+.tab-prodi a {
+color:#fff;
+text-transform:uppercase;
+padding:20px 0;
+font-size:18px;
+cursor:pointer;
+}
+.tab-prodi a.active {
+    color:#fbc800;
+    text-decoration: none;
+}
+.tab-prodi a:hover {
+    color:#fbc800;
+    text-decoration: none;
+}
+.tab-prodi a:before{
+content:"";
+width:6px;
+height:6px;
+background:#F6B801;
+display:inline-block;
+border-radius:6px;
+margin:0 20px 2px;
+}
+.tab-prodi a:first-child:before{
+display:none;
+}
+.icon-prodi-container {margin-bottom:0px;height:60px;text-align: center;}
+.icon-prodi {
+background:#fff;
+padding:20px 13px;
+width:20px;
+height:20px;
+border-radius:60px;
+font-size:35px;
+color:#004028;
+margin-bottom:30px;
+}
+
+.icon-prodi.h:hover{
+    cursor: pointer;
+    background-color: #fbc800;
+}
+
+.icon-prodi.fkik {
+background:#004028;
+color:#fff;
+}
+.icon-prodi.fisipol {
+background:#62C3D0;
+color:#fff;
+}
+.icon-prodi.fpb {
+background:#F08519;
+color:#fff;
+}
+.icon-prodi.fp {
+background:#8BC66F;
+color:#fff;
+}
+.icon-prodi.ft{
+background:#0079C3;
+color:#fff;
+}
+.icon-prodi.fh{
+background:#C82126;
+color:#fff;
+}
+.icon-prodi.fai{
+background:#946E3F;
+color:#fff;
+}
+.icon-prodi.fvi{
+background:#a9a9a9;
+color:#fff;
+}
+.icon-prodi.fe{
+background:#FFE100;
+color:#fff;
+}
+
+.prodi-collapse {
+padding:70px 0 40px;
+background:#fff;
+}
+.prodi-collapse .row {
+margin-bottom:50px;
+}
+.prodi-collapse ul {
+padding:0;
+margin-left:15px;
+}
+
+.prodi-collapse ul.fkik {
+color:#004028;
+}
+.prodi-collapse ul.fisipol{
+color:#62C3D0;
+}
+.prodi-collapse ul.fpb{
+color:#F08519;
+}
+.prodi-collapse ul.fp {
+color:#8BC66F;
+}
+.prodi-collapse ul.ft{
+color:#0079C3;
+}
+.prodi-collapse ul.fh{
+color:#C82126;
+}
+.prodi-collapse ul.fai{
+color:#946E3F;
+}
+.prodi-collapse ul.fe{
+color:#FFE100;
+}
+
+/*section title yg warna kuning*/
+h3.section-title {
+color:#fff;
+display:inline-block;
+padding:0;
+position:relative;
+top:-30px;
+text-transform:uppercase;
+z-index:30;
+}
+h3.section-title.right {
+float:right;
+}
+h3.section-title.left {
+float:left;
+}
+
+h3.section-title.right span{
+background:#fbc800;
+padding:15px 20px 13px 0;
+display:inline-block;
+}
+h3.section-title.right:before{
+background:transparent url(images/main-nav.png) right top no-repeat;
+width:80px;
+height:50px;
+content:"";
+float:left;
+}
+h3.section-title.left span{
+background:#fbc800;
+padding:15px 0px 13px 20px;
+display:inline-block;
+}
+h3.section-title.left:before{
+background:transparent url(images/main-nav2.png) left top no-repeat;
+width:80px;
+height:50px;
+content:"";
+float:right;
+}
+
+h4.section-title {
+text-transform:uppercase;
+color:#333;
+font-size:20px;
+padding:0;
+margin:0;
+}
+/*content*/
+.content {
+padding:25px 0;
+background:#fff;
+}
+
+.content .btn {
+margin-top:20px;
+}
+
+/*gallery home*/
+.gallery img{
+  width: 96%;
+  border-radius: 3px;
+  margin-bottom: 3px;
+}
+.gallery.no-gutter [class*="-6"] {
+	padding-right:0;
+}
+.gallery.no-gutter [class*="-6"]:last-child{
+	padding-right:15px;
+	padding-left:0;
+	
+}
+
+/*footer*/
+.footer {
+background:#065139;
+padding:30px 0;
+color:#fff;
+}
+.footer a {
+color:#fff;
+}
+.footer h4 {
+color:#fff;
+font-weight:normal;
+font-size:14px;
+text-transform:uppercase;
+}
+
+.logofooter {text-align:center;}
+
+.footer-bottom {
+background:#172E24;
+}
+.copyright {
+text-align:center;
+padding:10px 0;
+color:#fff;
+font-size:10px;
+} 
+.copyright a {
+color:#fff;
+}
+/*social */
+ul.social{width:100%;}
+ul.social li{margin-right:0px;text-align:center;margin-bottom:5px;float:left; margin-top:45px;}
+ul.social li a{color:#fff;text-decoration:none;font-size:20px;font-weight:normal;display:inline-block;padding:0px;-webkit-transition:0.5s;-moz-transition:0.5s;-o-transition:0.5s;-ms-transition:0.5s;transition:0.5s;color:#fff;
+margin-right:5px;}
+li a.facebook:hover{color:#3c599f;}
+li a.twitter:hover{color:#37cffe;}
+li a.gplus:hover{color:#f73e29;}
+li a.youtube:hover{color:#cb282b;}
+li a.instagram:hover{color:#a97d62;}
+
+
+/*tab*/
+
+.calendar-tab .nav-tabs {
+margin-top:0;
+margin-bottom:10px;
+}
+.calendar-tab .nav-tabs{
+border:none;
+}
+.calendar-tab .nav-tabs li a{
+background:#fff;
+text-transform:uppercase;
+}
+
+.calendar-tab .nav-tabs>li>a{
+border-radius:5px 5px 5px 5px;
+color:#333;
+}
+.calendar-tab .nav>li>a{
+padding:3px 10px;
+}
+.calendar-tab .nav-tabs>li.active>a, 
+.calendar-tab .nav-tabs>li.active>a:hover, 
+.calendar-tab .nav-tabs>li.active>a:focus {
+background:#ddd;
+color:#fff;
+border:1px solid #fff;
+}
+
+.calendar-tab .nav>li>a:hover{
+border:1px solid #fff;
+}
+
+.calendar-tab  .tab-content h4 {
+margin:0;
+}
+
+.tab-pane section {
+margin-bottom:10px;
+}
+
+.tab-pane section:last-child {
+margin-bottom:0px;
+}
+
+
+
+/*============================================*/
+/*PROFIL STYLE*/
+/*============================================*/
+
+/*color band*/
+.green{background: #004028;}
+.yellow{background: #f6b801;}
+.red{background: #922520;}
+
+.amanah{
+    padding: 40px 0 40px 0;
+}
+
+.amanah h2{
+    text-align: center;
+    font-weight: 400;
+}
+
+/*tagname*/
+.tag-name{
+    padding: 20px 0 20px 0;
+    color: white;
+}
+
+.tag-name h3{
+    text-align: left;
+    font-size: 24px;
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+.tag-name span{
+    color: white;
+    font-size: 24px;
+    float: right;
+    padding-right: 20px;
+    margin-top: 10px;
+    text-align: right !imortant;
+}
+
+.tag-name span:hover{
+    cursor:pointer;
+}
+
+.description{
+    padding: 20px 0 20px 0;
+    display: none;
+}
+
+.description h3{
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.description h5{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0;
+    margin:0;
+}
+
+.description ul{
+    list-style: circle;
+    margin: 12px 0 24px 25px;
+    padding: 0;
+}
+
+
+/*menu bottom slide*/
+.nav.nav-center {
+    display: inline-block;
+    left: 0;
+    right: 0;
+    text-align:center;width:100%;
+    background: #f6b801; 
+    color: white;
+    font-weight: 700;
+    padding: 14px 0;
+}
+
+.nav.nav-center li{
+    background: transparent !important;        
+    padding: 17px 0;
+}
+.nav.nav-center li:hover{    
+    background-color: rgba(0,0,0,0.1) !important;
+}
+
+.nav.nav-center li a{
+    color: white;
+    background-color: transparent !important;
+    letter-spacing: 1px;
+}
+.nav.nav-center li a:hover{
+    color: darkgreen;
+    background-color: transparent !important;
+    letter-spacing: 1px;
+}
+
+.nav.nav-center li,.nav.nav-center li  a{display:inline;float:none;}
+/*-------------------------------*/
+
+/*dropdown menu*/
+.navbar-nav>li>.dropdown-menu{
+    margin-bottom: -180px;
+    margin-left: -68px;
+    position:relative;
+    z-index: 9999;
+}
+.bx-wrapper .bx-controls-direction a{
+    z-index: 9 !important;
+}
+/*------------------------*/
+
+/*=================================================*/
+/*FASILITAS STYLE*/
+/*=================================================*/
+
+.fasilitas{
+    padding: 20px 20px;
+    color: white;
+}
+
+.fasilitas p{
+    text-align:justify;
+}
+
+.fasilitas h3{
+    font-size: 24px;
+    font-weight:400;
+}
+
+.fasilitas.white{
+    color: #555;
+}
+
+.fasilitas ul{
+    list-style: circle;
+    margin: 0;
+    padding: 0 0 0 18px;
+}
+
+.fasilitas h4{
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.middle{
+    height: 100px;
+    display:table-cell;
+    vertical-align:middle;
+}
+
+.middle.h120{
+    height: 120px;
+}
+.middle.h150{
+    height: 150px;
+}
+.middle.h200{
+    height: 200px;
+}
+
+.middle.h230{
+    height: 230px;
+}
+
+/*slidecustom*/
+.fslider .bx-wrapper .bx-pager{
+    display:none !important;
+}
+
+/*======================*/
+/* MILESTONE */
+/*======================*/
+
+.tag-name .middle p{
+    padding-right: 40px;
+    text-align: justify;
+}
+
+/*======================*/
+/* visimisi */
+/*======================*/
+
+.visimisi h2{
+    font-weight: 400;
+    text-align: right;
+    padding-left: 150px;
+    color:#555;
+}
+
+.visimisi{
+    padding: 40px 0;
+}
+
+.description.visimisi{
+    display: block;
+    padding-right: 200px;
+    padding-left: 15px;
+}
+
+.description.visimisi li{
+    margin-bottom: 6px;
+}
+
+.description.visimisi h5:before{
+    content: "\2022";
+    font-size: 22px;
+    margin-top: 15px !important;
+    position: relative;
+    margin-right: 5px;
+}
+
+.description.visimisi ol{
+    list-style: decimal;
+}
+
+.description.visimisi ul.nons{
+    list-style: none;
+}
+
+.abuabu{
+    background: #eeeeee;
+}
+
+/*==========================*/
+/*akreditasi*/
+/*==========================*/
+.f2f2{
+    background: #f2f2f2;
+}
+
+.description.akreditasi{
+    display: block;
+    padding: 40px 30px;
+}
+
+.description.akreditasi ul{
+    list-style: none;
+    text-align: left;
+}
+
+.description.akreditasi li{
+    padding-left: 1em; 
+    text-indent: -1.1em;
+}
+.description.akreditasi li:before{
+    content: "•";
+    font-size: 18px;
+    color: darkgreen; /* or whatever color you prefer */
+    padding-right: 10px;
+}
+
+.middle.h400{
+    height: 400px;
+    width: 50%;
+    text-align: center;
+}
+
+/*nesw*/
+.sarjana{
+    text-align: center;
+}
+.prodi-collapse ul{
+    margin-left: 0;
+}
+
+.pasca ul, .vokasi ul, .internasional ul, .sarjana ul{
+    list-style: disc;
+    text-align: left;
+    padding: 0 0 0 70px;
+}
+
+.sarjana ul{
+    padding-left: 35px;
+}
+
+.vokasi ul, .internasional ul{
+    margin-left: 340px;
+}
+
+.pasca ul li, .vokasi ul li, .international ul li{
+    padding-bottom: 5px;
+}
+
+/*========================*/
+/*Kerjasama*/
+/*========================*/
+
+.kerjasama{
+    padding: 40px 0;
+    text-align: center;
+}
+
+.dededc{
+    background:  #dededc;
+}
+
+.middle.dedc{
+    text-align: center;
+    display: block;
+}
+
+/*===========================*/
+/*Organisasi*/
+/*===========================*/
+
+.organisasi h4{
+    font-weight: 400;
+    font-size: 16px;
+    font-style: italic;
+}
+
+/* these styles are for the demo, but are not required for the plugin */
+.zoom {
+    display:inline-block;
+    position: relative;
+}
+
+.zoom img {
+    display: block;
+    cursor:hand;
+}
+.zoom img:hover {
+    cursor:zoom-in;
+}
+
+.zoom img::selection { background-color: transparent; }
+
+.struktur{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/*=======================*/
+/*Identitas*/
+/*=======================*/
+
+.middle.identitas{
+    height: 150px;
+}
+
+.identitas span{
+    font-weight:400;
+    font-size: 24px;
+}
+
+.identitas span:hover{
+    cursor: pointer;
+}
+
+.in span{
+    margin-top: 12px;
+    font-weight:100;
+}
+
+.in span:hover{
+    cursor: pointer;
+}
+
+.in h3{
+    cursor: pointer;
+    font-weight: 400 !important;
+}
+
+.amanah.i{
+    padding-bottom: 0;
+    padding-top: 20px;
+}
+.amanah.i h2{
+    text-align: left;
+}
+
+/*===========================*/
+/*news*/
+/*===========================*/
+
+#wrapper{
+    margin-bottom: 40px;
+}
+
+#wrapper img{
+    width:100%;
+    height:auto;
+}
+
+.content-news{
+    clear:both;
+    margin-bottom: 20px;
+    float: left;
+}
+
+.content-news h2{
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.content-news h3{
+    font-weight: 400;
+}
+
+.content-news p{
+    text-align: justify;
+}
+
+.content-news.detail img{
+    margin-bottom: 12px;
+}
+
+.sidebar-left .main{
+  float:right;
+}
+.sidebar-left .sidebar{
+  float:left;
+}
+
+.sidebar-right .main{
+  float:left;
+}
+.sidebar-right .sidebar{
+  float:right;
+}
+
+.sidebar .navbar-form{    
+    float:left !important;
+    padding: 0 0 15px 0;
+}
+
+.sidebar .navbar-form .form-control{
+    width:290px;
+}
+
+.sidebar-module{
+    margin-bottom: 48px;
+}
+
+.sidebar-module ul{
+    margin: 0;
+    padding: 0
+}
+
+.sidebar-module.terkini li{
+    border-bottom: 1px solid #999;
+}
+
+.pagination{
+    margin: 50px 0;
+    text-align: center;
+}
+
+.pagination li{
+    display: inline;
+}
+
+.pagination li{
+    text-decoration: none;    
+    padding: 6px 10px;
+    border: 1px solid #d2cece;
+    border-radius: 5px;
+    background: #eee;
+    margin: 0 3px;
+}
+
+.pagination li a{
+    text-decoration: none;
+}
+
+.pagination li.disabled{
+    padding: 0 10px;
+    border:none;
+    background: none;
+}
+
+.pagination li.active{
+    background: #bbbaba;
+}
+
